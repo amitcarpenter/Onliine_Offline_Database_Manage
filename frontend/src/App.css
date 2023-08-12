@@ -1,0 +1,297 @@
+.loadingDiv {
+  width: 100%;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.loaderPreview {
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #FFF #FFF transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loaderPreview::after,
+.loaderPreview::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent #FF3D00 #FF3D00;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+
+.loaderPreview::before {
+  width: 62px;
+  height: 62px;
+  border-color: #07c4aa #089297 transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.mainBox {
+  background-color: #fff;
+  box-shadow: 2px -1px 12px 0px rgba(194, 194, 194, 0.75);
+  -webkit-box-shadow: 2px -1px 12px 0px rgba(194, 194, 194, 0.75);
+  -moz-box-shadow: 2px -1px 12px 0px rgba(194, 194, 194, 0.75);
+  padding: 10px;
+  position: relative;
+  margin-top: 50px;
+  border-radius: 10px 80px 20px 20px;
+}
+.mainBox .mainBoxTop {
+  text-align: center;
+}
+.mainBox .mainBoxTop h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #089297;
+}
+.mainBox .mainBoxTop h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #089297;
+  text-decoration: underline;
+  padding-top: 10px;
+}
+.mainBox .buttonBox {
+  position: absolute;
+  top: 15px;
+  left: 40px;
+}
+.mainBox .buttonBox button {
+  border: none;
+  outline: none;
+  background-image: linear-gradient(to right, #089297, #07c4aa);
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 12px;
+  padding: 5px 15px;
+  font-weight: 500;
+  color: #fff;
+  transition: 0.2s ease;
+}
+.mainBox .buttonBox button:hover {
+  background-image: linear-gradient(to left, rgb(8, 146, 151), rgb(7, 196, 170));
+  transform: scale(1.1);
+}
+.mainBox .buttonBox button a {
+  text-decoration: none;
+  color: #fff;
+}
+.mainBox .slipNoBox {
+  padding: 20px 0;
+}
+.mainBox .slipNoBox input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #089297;
+  background-color: transparent;
+}
+.mainBox .slipNoBox span,
+.mainBox .slipNoBox label {
+  font-weight: 700;
+  color: #089297;
+}
+.mainBox .mainFormBox input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 2px dashed #089297;
+  background-color: transparent;
+}
+.mainBox .mainFormBox input:focus {
+  border-bottom: 2px solid #089297;
+}
+.mainBox .mainFormBox #dateInput {
+  display: none;
+}
+.mainBox .mainFormBox span {
+  font-weight: 700;
+  color: #089297;
+}
+.mainBox .mainFormBox .submitButtons button {
+  border: none;
+  outline: none;
+  background-image: linear-gradient(to right, #089297, #07c4aa);
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 12px;
+  padding: 5px 15px;
+  font-weight: 500;
+  color: #fff;
+  transition: 0.2s ease;
+}
+.mainBox .mainFormBox .submitButtons button:hover {
+  background-image: linear-gradient(to left, rgb(8, 146, 151), rgb(7, 196, 170));
+  transform: scale(1.1);
+}
+.mainBox .mainFormBox .submitButtons button img {
+  height: 20px;
+  width: 20px;
+}
+
+.updateButton {
+  border: none;
+  outline: none;
+  background-image: linear-gradient(to right, #089297, #07c4aa);
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 12px;
+  padding: 5px 15px;
+  font-weight: 500;
+  color: #fff;
+  transition: 0.2s ease;
+}
+.updateButton:hover {
+  background-image: linear-gradient(to left, rgb(8, 146, 151), rgb(7, 196, 170));
+  transform: scale(1.1);
+}
+
+.reportBox .searchButton {
+  border: none;
+  outline: none;
+  background-image: linear-gradient(to right, #089297, #07c4aa);
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 12px;
+  padding: 5px 15px;
+  font-weight: 500;
+  color: #fff;
+  transition: 0.2s ease;
+  display: flex;
+  align-items: center;
+  margin-top: -3px;
+}
+.reportBox .searchButton span {
+  font-size: 20px;
+  padding-right: 10px;
+  margin-top: -5px;
+  color: #fff;
+}
+.reportBox .searchButton:hover {
+  background-image: linear-gradient(to left, #089297, #07c4aa);
+}
+.reportBox input {
+  border: none;
+  outline: none;
+  background-color: #07c4aa;
+  color: #fff;
+  padding: 3px 5px;
+  border-radius: 5px;
+}
+.reportBox span {
+  font-weight: 700;
+  color: #089297;
+}
+
+.boxArea {
+  position: relative;
+  min-height: 50vh;
+  width: 100%;
+}
+.boxArea .noDataDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.box div {
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box div:nth-child(-n+9) {
+  background-color: #A7C942;
+  color: #fff;
+  font-weight: 500;
+}
+
+.box div:nth-child(even) {
+  background-color: #b3b3b3;
+}
+
+.boxArea table {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.boxArea table th {
+  text-align: center;
+  background-color: #007074;
+  color: #fff;
+}
+.boxArea table td {
+  text-align: center;
+}
+.boxArea table tr:nth-child(even) {
+  background-color: #0d9783;
+  color: #fff;
+}
+.boxArea table tr:nth-child(even) a {
+  color: #fff;
+  font-size: 18px;
+  margin: 0 2px;
+}
+.boxArea table tr:nth-child(odd) a {
+  color: #000;
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+@media screen and (max-width: 992px) {
+  .boxArea {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .boxArea table {
+    width: 600px;
+    border: 1px solid #000;
+  }
+}/*# sourceMappingURL=App.css.map */
